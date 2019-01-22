@@ -34,12 +34,6 @@ parser = argparse.ArgumentParser(description='Deformation prediction given set o
 
 requiredNamed = parser.add_argument_group('required named arguments')
 
-requiredNamed.add_argument('--moving-image', nargs='+', required=True, metavar=('m1', 'm2, m3...'),
-                           help='List of moving images, seperated by space.')
-requiredNamed.add_argument('--target-image', nargs='+', required=True, metavar=('t1', 't2, t3...'),
-                           help='List of target images, seperated by space.')
-requiredNamed.add_argument('--output-prefix', nargs='+', required=True, metavar=('o1', 'o2, o3...'),
-                           help='List of registration output prefixes for every moving/target image pair, seperated by space. Preferred to be a directory (e.g. /some_path/output_dir/)')
 parser.add_argument('--batch-size', type=int, default=64, metavar='N',
                     help='input batch size for prediction network (default: 64)')
 parser.add_argument('--n-GPU', type=int, default=1, metavar='N',
